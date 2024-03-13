@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  width: 100svw;
+  height: 100svh;
+  background-color: #0ead6d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins, sans-serif;
+  color: aliceblue;
+  z-index: -1;
+}
+
+.chartHolder {
+  background-color: rgb(45, 65, 97);
+  width: 90%;
+  max-height: 600px;
+  max-width: 860px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  z-index: 0;
+}
+
+.chartHolder h1 {
+  font-size: 11pt;
+  line-height: 1;
+  text-align: center;
+}
+
+.chart {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+#tooltip {
+  position: absolute;
+  height: auto;
+  width: 80px;
+  margin: auto;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4pt;
+  text-decoration: solid;
+  font-weight: bolder;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+#legend {
+  font-size: x-small;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#x-axis,
+#y-axis {
+  font-weight: 800;
+}
+
+.dot:hover {
+  fill: rgb(219, 232, 244);
+  cursor: pointer;
+  z-index: 9;
+}
+
+@media screen and (min-width: 750px) {
+  .chartHolder h1 {
+    font-size: 22pt;
+    line-height: 1;
+    text-align: center;
+  }
+
+  #tooltip {
+    width: 156px;
+    font-size: x-small;
+  }
+}
